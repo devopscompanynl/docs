@@ -118,5 +118,8 @@
   },
   "appearance": {
     "default": "light"
+  },
+  "api": {
+    "openapi": "/openapi.json"
   }
 }
