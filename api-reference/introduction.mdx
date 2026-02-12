@@ -1,33 +1,47 @@
 ---
 title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+description: 'DocOpsAI API for AI-based order processing, customer and product management, and email monitoring'
 ---
-
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
 
 ## Welcome
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+The DocOpsAI API powers an AI-based order processing application that extracts information from email attachments and forwards it to backend systems. It provides endpoints for order management, customer and product CRUD, email watching, and template parameter configuration.
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+The API reference is generated from our [OpenAPI specification](https://github.com/devopscompanynl/docs/blob/main/api-reference/openapi.json).
+
+## Base URL
+
+All API requests are made to:
+
+```
+https://customer.aiotic.ai
+```
 
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+All API endpoints (except `/healthcheck`) require an API key passed via the `X-API-Key` header. Customer and product endpoints also accept a customer-specific API key.
 
 ```json
 "security": [
   {
-    "bearerAuth": []
+    "ApiKeyAuth": []
   }
 ]
 ```
+
+## Core concepts
+
+<CardGroup cols={2}>
+  <Card title="Orders" icon="file-invoice" href="/api-reference/endpoint/upload-order">
+    Upload documents for AI processing and track order status
+  </Card>
+  <Card title="Customers" icon="users" href="/api-reference/endpoint/list-customers">
+    Manage customer records with semantic vector search
+  </Card>
+  <Card title="Products" icon="box" href="/api-reference/endpoint/list-products">
+    Multi-language product catalog management
+  </Card>
+  <Card title="Email watcher" icon="envelope" href="/api-reference/endpoint/fetch-all-emails">
+    Monitor inboxes and automatically process incoming orders
+  </Card>
+</CardGroup>

@@ -51,18 +51,64 @@
         "tab": "API reference",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Overview",
             "pages": [
               "api-reference/introduction"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Healthcheck",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api-reference/endpoint/healthcheck"
+            ]
+          },
+          {
+            "group": "Orders",
+            "pages": [
+              "api-reference/endpoint/upload-order",
+              "api-reference/endpoint/retry-order",
+              "api-reference/endpoint/get-processed-file",
+              "api-reference/endpoint/classify-raw-email",
+              "api-reference/endpoint/upload-raw-email"
+            ]
+          },
+          {
+            "group": "Order status",
+            "pages": [
+              "api-reference/endpoint/list-orders",
+              "api-reference/endpoint/get-order-status"
+            ]
+          },
+          {
+            "group": "Customers",
+            "pages": [
+              "api-reference/endpoint/list-customers",
+              "api-reference/endpoint/search-customers",
+              "api-reference/endpoint/get-customer",
+              "api-reference/endpoint/upsert-customer",
+              "api-reference/endpoint/delete-customer"
+            ]
+          },
+          {
+            "group": "Products",
+            "pages": [
+              "api-reference/endpoint/list-products",
+              "api-reference/endpoint/get-product",
+              "api-reference/endpoint/upsert-product",
+              "api-reference/endpoint/delete-product"
+            ]
+          },
+          {
+            "group": "Template parameters",
+            "pages": [
+              "api-reference/endpoint/list-template-parameters",
+              "api-reference/endpoint/update-template-parameter"
+            ]
+          },
+          {
+            "group": "Email watcher",
+            "pages": [
+              "api-reference/endpoint/fetch-all-emails"
             ]
           }
         ]
@@ -74,11 +120,6 @@
           "anchor": "Documentation",
           "href": "https://docs.aiotic.ai",
           "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
         }
       ]
     }
@@ -94,7 +135,7 @@
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://www.aiotic.ai"
     }
   },
   "contextual": {
@@ -119,6 +160,6 @@
     "default": "light"
   },
   "api": {
-    "openapi": "/openapi.json"
+    "openapi": "/api-reference/openapi.json"
   }
 }
