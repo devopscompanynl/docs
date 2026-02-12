@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "https://customer.aiotic.ai",
+      "url": "https://start.aiotic.ai",
       "description": "Production server"
     }
   ],
